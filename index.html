@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PC Gamers: tienda de computadoras y accesorios gamer.">
+    <title>PC Gamers | Tienda de computación</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <a class="logo" href="#inicio">PC <span>Gamers</span></a>
+        <p>Tu próximo nivel empieza aquí</p>
+    </header>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Productos</a>
+        <a href="#carrito">Carrito <span id="contador-carrito">0</span></a>
+        <a href="#contacto">Contactos</a>
+        <button id="boton-cerrar-sesion" class="boton boton-secundario oculto" type="button">
+            Cerrar sesión
+        </button>
+    </nav>
+
+    <main>
+        <!-- INICIO DE SESIÓN -->
+        <section id="seccion-login" class="panel-login">
+            <h1>Iniciar sesión</h1>
+            <p>Ingresa para acceder a la tienda.</p>
+
+            <form id="formulario-login">
+                <label for="usuario">Usuario</label>
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="contrasena">Contraseña</label>
+                <input
+                    type="password"
+                    id="contrasena"
+                    name="contrasena"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button class="boton" type="submit">Ingresar</button>
+                <p id="mensaje-login" class="mensaje" role="status"></p>
+            </form>
+
+            <p class="ayuda-login">
+                Acceso de demostración: usuario <strong>admin</strong>,
+                contraseña <strong>12345</strong>.
+            </p>
+        </section>
+
+        <!-- CONTENIDO DE LA TIENDA -->
+        <section id="seccion-tienda" class="oculto">
+            <section id="inicio" class="portada">
+                <div>
+                    <p class="etiqueta">PC GAMERS</p>
+                    <h1>Potencia para jugar.<br>Rendimiento para todo.</h1>
+                    <p>Encuentra computadoras y accesorios para tu espacio gamer.</p>
+                    <a class="boton enlace-boton" href="#catalogo">Ver productos</a>
+                </div>
+            
+            </section>
+
+            <section id="catalogo" class="seccion">
+                <div class="titulo-seccion">
+                    <div>
+                        <p class="etiqueta">CATÁLOGO</p>
+                        <h2>Productos destacados</h2>
+                    </div>
+
+                    <label class="buscador">
+                        <span>Buscar</span>
+                        <input id="busqueda" type="search" placeholder="Ej. teclado">
+                    </label>
+                </div>
+
+                <div id="lista-productos" class="rejilla-productos">
+                    <!-- JavaScript coloca aquí los productos -->
+                </div>
+            </section>
+
+            <section id="carrito" class="seccion">
+                <div class="titulo-seccion">
+                    <div>
+                        <p class="etiqueta">TU PEDIDO</p>
+                        <h2>Carrito de compras</h2>
+                    </div>
+                </div>
+
+                <div class="carrito-contenido">
+                    <div id="lista-carrito" class="lista-carrito">
+                        <!-- JavaScript coloca aquí los productos del carrito -->
+                    </div>
+
+                    <aside class="resumen-compra">
+                        <h3>Resumen</h3>
+                        <p>Subtotal: <strong id="subtotal">Bs 0</strong></p>
+                        <p>Envío: <strong>Gratis</strong></p>
+                        <hr>
+                        <p class="total">Total: <strong id="total">Bs 0</strong></p>
+                        <button id="boton-comprar" class="boton" type="button">
+                            Confirmar compra
+                        </button>
+                        <p id="mensaje-compra" class="mensaje" role="status"></p>
+                    </aside>
+                </div>
+            </section>
+
+            <section id="contacto" class="seccion">
+                <div class="titulo-seccion">
+                    <div>
+                        <p class="etiqueta">ATENCIÓN Y SOPORTE</p>
+                        <h2>Contactos</h2>
+                    </div>
+                </div>
+
+                <div class="rejilla-contacto">
+                    <article class="tarjeta-contacto">
+                        <h3>Canales directos</h3>
+                        <p><strong>Correo:</strong> contacto@pcgamers.bo</p>
+                        <p><strong>Teléfono / WhatsApp:</strong> +591 70000000</p>
+                        <p><strong>Horario:</strong> Lun a Sáb, 09:00 a 19:00</p>
+                    </article>
+
+                    <article class="tarjeta-contacto">
+                        <h3>Escríbenos</h3>
+                        <form id="formulario-contacto" class="formulario-contacto">
+                            <label for="nombre-contacto">Nombre</label>
+                            <input id="nombre-contacto" type="text" required>
+
+                            <label for="correo-contacto">Correo electrónico</label>
+                            <input id="correo-contacto" type="email" required>
+
+                            <label for="mensaje-contacto">Mensaje</label>
+                            <textarea id="mensaje-contacto" rows="3" required></textarea>
+
+                            <button class="boton" type="submit">Enviar consulta</button>
+                            <p id="mensaje-envio-contacto" class="mensaje" role="status"></p>
+                        </form>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>PC Gamers · Computadoras , monitores y accesorios.</p>
+        <p>© 2026 PC Gamers. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
